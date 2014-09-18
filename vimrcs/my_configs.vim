@@ -10,6 +10,7 @@ set foldmethod :indent
 set splitright
 set splitbelow
 
+""" (NERDTree)
 "" Easier to toggle NERDTree than ,nn
 map <silent> <C-i> :NERDTreeToggle<CR>
 "" Reveal current file in nerdtree
@@ -22,6 +23,11 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 "" Unfold all folds when opening a file
 au BufWinEnter * normal zR
+
+"" (yankstack)
+"" Ctrl-p/o to cycle through yanks
+nmap <C-p> <Plug>yankstack_substitute_older_paste
+nmap <C-o> <Plug>yankstack_substitute_newer_paste
 
 """""""""""""""""
 " Fix Meta-Keys "
