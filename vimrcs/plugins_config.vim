@@ -32,11 +32,11 @@ map <leader>f :MRU<CR>
 """"""""""""""""""""""""""""""
 " => YankRing
 """"""""""""""""""""""""""""""
-if has("win16") || has("win32")
-    " Don't do anything
-else
-    let g:yankring_history_dir = '~/.vim_runtime/temp_dirs/'
-endif
+" if has("win16") || has("win32")
+"     " Don't do anything
+" else
+"     let g:yankring_history_dir = '~/.vim_runtime/temp_dirs/'
+" endif
 
 
 """"""""""""""""""""""""""""""
