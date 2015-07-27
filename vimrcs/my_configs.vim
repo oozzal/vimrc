@@ -56,3 +56,51 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 " note that, the ^[ is an Esc char that comes before the 'p'
 " In most default configurations, ^[p may be typed by pressing first <C-v>, then <M-p>
 
+"" (javascript-libraries-syntax.vim)
+let g:used_javascript_libs = 'angularjs,requirejs,jquery'
+
+"" (syntastic jslint config)
+let g:syntastic_javascript_jshint_args="--tab-width=2"
+
+let g:easytags_async=1
+
+"" ctrl-p ignore path
+set wildignore+=*/tmp/*,*/platforms/*,*/plugins/*,*/node_modules/*
+
+"" vim-rspec configs
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
+
+set shell=/bin/sh
+
+"" Vim mustache handlebars plugin
+let g:mustache_abbreviations=1
+
+scriptencoding utf-8
+set encoding=utf-8
+
+"" https://github.com/nviennot/irb-config
+"" https://github.com/benmills/vimux
+" command -nargs=? -complete=shellcmd W  :w | :call ScreenSend("load '".@%."';")
+map <Leader>c :VimuxRunCommand("bundle exec rails c")<CR>
+map <Leader>ct :VimuxRunCommand("bundle exec rails c test")<CR>
+map <Leader>l :VimuxRunCommand("load '". @% ."';")<CR>
+map <Leader>t :VimuxRunCommand("rspec " . @%)<CR>
+map <Leader>tl :VimuxRunCommand("rspec ". @% .':' . line('.'))<CR>
+map <Leader>ta :VimuxRunCommand("rspec")<CR>
+" map <Leader>e :w<CR> :call ScreenSend("cucumber --format=pretty ".@% . ':' . line('.'))<CR>
+map <Leader>b :VimuxRunCommand("break ". @% . ':' . line('.'))<CR>
+
+"" Change file type from .scss to .sass
+au BufRead,BufNewFile *.sass set filetype=sass
+
+"" undotree config (don't populate working directory with undo history)
+if has("persistent_undo")
+  set undodir='~/.undodir/'
+  set undofile
+endif
+
+"" Toggle undo tree with Ctrl-U
+map <silent> <C-u> :UndotreeToggle<CR>

@@ -1,0 +1,31 @@
+['tpope/vim-surround', 'ntpeters/vim-better-whitespace', 'christoomey/vim-tmux-navigator', 'airblade/vim-gitgutter', 'mattn/emmet-vim'].each {|path| `vinstall #{path}`},v
+ervandew/supertab,v
+'ervandew/supertab''tpope/vim-surround''ntpeters/vim-better-whitespace''christoomey/vim-tmux-navigator''airblade/vim-gitgutter.git''mattn/emmet-vim',1
+/,v
+e,v
+p,v
+o,v
+t,v
+s,v
+l,v
+i,v
+a,v
+r,v
+-,v
+m,v
+v,v
+vim-rails,v
+git clone git://github.com/tpope/vim-rails.git sources_non_forked/vim-rails,V
+#!/Users/uzzaldevkota/.rvm/rubies/ruby-2.0.0-p195/bin/ruby,V
+,V
+" Fold Indentset foldmethod=indent,V
+set splitrightset splitbelow,V
+",v
+Bundle 'tpope/vim-commentary',V
+Bundle 'mattn/emmet-vim',V
+Bundle 'airblade/vim-gitgutter.git',V
+Bundle 'christoomey/vim-tmux-navigator',V
+Bundle 'ntpeters/vim-better-whitespace',V
+Bundle 'terryma/vim-multiple-cursors',V
+"Vundle settings"set nocompatible              " be iMprovedfiletype off                  " required!set rtp+=~/.vim/bundle/vundle/call vundle#rc()" let Vundle manage Vundle" required!Bundle 'gmarik/vundle'Bundle 'scrooloose/nerdtree'Bundle 'scrooloose/syntastic'Bundle 'kien/ctrlp.vim'Bundle 'ervandew/supertab'Bundle 'tpope/vim-surround'Bundle 'fatih/vim-go'Bundle 'terryma/vim-multiple-cursors'Bundle 'ntpeters/vim-better-whitespace'Bundle 'christoomey/vim-tmux-navigator'Bundle 'airblade/vim-gitgutter.git'Bundle 'vim-ruby/vim-ruby.git'Bundle 'tpope/vim-rails.git'Bundle 'mattn/emmet-vim'Bundle 'tpope/vim-commentary'Bundle 'burnettk/vim-angular'Bundle 'kchmck/vim-coffee-script'Bundle 'othree/html5-syntax.vim'Bundle 'tpope/vim-markdown'Bundle 'jelera/vim-javascript-syntax'Bundle 'tpope/vim-fugitive'Bundle 'Lokaltog/vim-easymotion'Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}Bundle 'git://git.wincent.com/command-t.git'set splitrightset splitbelow" Sets how many lines of history VIM has to rememberset history=700"Display the current modeset showmode" Enable filetype pluginsfiletype plugin onfiletype indent on" Set to auto read when a file is changed from the outsideset autoread,V
+sh ~/.vim_runtime/install_awesome_vimrc.sh,v

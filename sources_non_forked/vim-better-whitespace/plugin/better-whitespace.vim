@@ -55,7 +55,6 @@ function! s:EnableWhitespace()
         " Match default whitespace
         match ExtraWhitespace /\s\+$/
         call <SID>SetupAutoCommands()
-        echo "Whitespace Highlighting: Enabled"
     endif
 endfunction
 
@@ -67,7 +66,6 @@ function! s:DisableWhitespace()
         match ExtraWhitespace ''
         syn clear ExtraWhitespace
         call <SID>SetupAutoCommands()
-        echo "Whitespace Highlighting: Disabled"
     endif
 endfunction
 
@@ -94,12 +92,10 @@ function! s:CurrentLineWhitespaceOff( level )
             let g:current_line_whitespace_disabled_soft = 0
             syn clear ExtraWhitespace
             match ExtraWhitespace /\s\+$/
-            echo "Current Line Hightlight Off (hard)"
         elseif a:level == 'soft'
             let g:current_line_whitespace_disabled_soft = 1
             let g:current_line_whitespace_disabled_hard = 0
             match ExtraWhitespace ''
-            echo "Current Line Hightlight Off (soft)"
         endif
         " Re-run auto commands with the new settings
         call <SID>SetupAutoCommands()
@@ -114,7 +110,6 @@ function! s:CurrentLineWhitespaceOn()
         call <SID>SetupAutoCommands()
         syn clear ExtraWhitespace
         match ExtraWhitespace /\s\+$/
-        echo "Current Line Hightlight On"
     endif
 endfunction
 
@@ -137,10 +132,8 @@ endfunction
 function! s:ToggleStripWhitespaceOnSave()
     if g:strip_whitespace_on_save == 0
         let g:strip_whitespace_on_save = 1
-        echo "Strip Whitespace On Save: Enabled"
     else
         let g:strip_whitespace_on_save = 0
-        echo "Strip Whitespace On Save: Disabled"
     endif
     call <SID>SetupAutoCommands()
 endfunction
